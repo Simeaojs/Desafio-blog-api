@@ -1,4 +1,4 @@
-package com.blog.api.Excepition;
+package com.blog.api.Exception;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import jakarta.persistence.EntityNotFoundException;
 
 @RestControllerAdvice
-public class Excepition {
+public class Exception {
 
      @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> tratarErro404(EntityNotFoundException ex) {
@@ -41,12 +41,4 @@ public class Excepition {
         return ResponseEntity.badRequest().body(ex.getMessage());
 
     }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> tratarErro500(Exception ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Erro interno de servidor  " + ex.getMessage());
-    }
-    
-
 }
