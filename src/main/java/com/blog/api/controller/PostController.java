@@ -28,22 +28,6 @@ public class PostController {
 
     }
 
-    @GetMapping
-    public ResponseEntity<Page<Post>> listarPost(@PageableDefault(size = 10) Pageable paginacao) {
-        return ResponseEntity.status(HttpStatus.OK).body(postRepository.findAll(paginacao));
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Post> listarPorId(@PathVariable("id") Long id) {
-        Optional<Post> post = postRepository.findById(id);
-
-        if (post.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(post.get());
-
-    }
-
     @GetMapping("/usuarios/{id}")
     public List<Post> listarPostDeUmUsuario(@PathVariable("id") Long id) {
         return postRepository.findByUsuarioIdUsuario(id);
@@ -51,7 +35,7 @@ public class PostController {
     }
 
     @GetMapping("/usuarios")
-    public Page<Post> listarPostDeUmUsuario(@PageableDefault(size = 10) Pageable paginacao) {
+    public Page<Post> listarPostDeUsuarios(@PageableDefault(size = 10) Pageable paginacao) {
         return postRepository.findAll(paginacao);
     }
 
@@ -64,7 +48,6 @@ public class PostController {
             postExistente.get().setConteudo(post.getConteudo());
             postExistente.get().setTitulo(post.getTitulo());
             postExistente.get().setDataDeCriacao(post.getDataDeCriacao());
-            postExistente.get().setUsuario(post.getUsuario());
 
             return postRepository.save(postExistente.get());
 
