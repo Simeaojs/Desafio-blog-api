@@ -59,4 +59,17 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deletarUsuario(@PathVariable("id") Long id) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+
+        if (usuario.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        usuarioRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
+    }
 }
