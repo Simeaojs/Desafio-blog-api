@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O objetivo deste projeto é desenvolver uma API REST usando o Spring Boot para um sistema de Blog que inclui três tipos de entidades: "Post", "Comentário" e "Usuário". A API é projetada para gerenciar postagens, comentários e autores em um blog.
+O objetivo deste projeto Foi desenvolver uma API REST usando o Spring Boot para um sistema de Blog que inclui três tipos de entidades: "Post", "Comentário" e "Usuário". A API é projetada para gerenciar postagens, comentários e autores em um blog.
 #
 ## ⚒️Tecnologias Utilizadas
 
