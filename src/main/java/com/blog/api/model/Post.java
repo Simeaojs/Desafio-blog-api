@@ -29,7 +29,7 @@ public class Post {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataDeCriacao;
 
-    @JoinColumn(unique = true, name = "idUsuario")
+    @JoinColumn(name = "IdUsuario")
     @OneToOne
     private Usuario usuario;
 

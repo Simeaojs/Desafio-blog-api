@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -42,6 +43,13 @@ public class PostController {
         return ResponseEntity.status(HttpStatus.OK).body(post.get());
 
     }
+
+    @GetMapping("/usuarios/{id}")
+    public List<Post> listarPostDeUmUsuario(@PathVariable("id") Long id) {
+        return postRepository.findByUsuarioIdUsuario(id);
+
+    }
+
 
     @PutMapping("/{id}")
     public Post atualizarPorId(@PathVariable("id") Long id, @RequestBody @Valid Post post) {
