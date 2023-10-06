@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity(name = "tb_post")
+@Entity(name = "Post")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Table(name = "tb_posts")
 public class Post {
 
     @Id

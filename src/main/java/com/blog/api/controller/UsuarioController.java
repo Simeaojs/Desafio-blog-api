@@ -2,6 +2,9 @@ package com.blog.api.controller;
 
 import com.blog.api.model.Usuario;
 import com.blog.api.repository.UsuarioRepository;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,6 +26,17 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> cadastrarNovoUsuario(@PathVariable("id") Long id, @RequestBody Usuario usuario) {
+        Optional<Usuario> Usuario = usuarioRepository.findById(id);
+
+        if (Usuario.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(Usuario.get());
+
+    }
+
     @GetMapping
     public Page<Usuario> listarUsuario(Pageable paginacao) {
         return usuarioRepository.findAll(paginacao);
@@ -30,7 +44,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public Usuario atualizarUsusario(@PathVariable("id") Long id, @RequestBody Usuario usuario) {
+    public ResponseEntity<Usuario> atualizarUsusario(@PathVariable("id") Long id, @RequestBody @Valid Usuario usuario) {
         Optional<Usuario> usuarioExistente = usuarioRepository.findById(id);
 
         if (usuarioExistente.isPresent()) {
@@ -39,13 +53,10 @@ public class UsuarioController {
             usuarioExistente.get().setSobrenome(usuario.getSobrenome());
             usuarioExistente.get().setSenha(usuario.getSenha());
 
-            return usuarioRepository.save(usuarioExistente.get());
-
-
+            return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.save(usuarioExistente.get()));
         }
-        return null;
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
     }
-
-
 }

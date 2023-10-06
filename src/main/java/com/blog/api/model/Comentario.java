@@ -8,15 +8,15 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity(name = "/tb_comentario")
+@Entity(name = "/comentario")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Table(name = "tb_comentarios")
 public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idComentario;
-
 
     @Column(columnDefinition = "TEXT")
     private String texto;
@@ -25,11 +25,11 @@ public class Comentario {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataDeCriacao;
 
-    @JoinColumn(unique = true, name = "idUsuario")
+    @JoinColumn(name = "idUsuario")
     @ManyToOne
     private Usuario usuario;
 
-    @JoinColumn(nullable = false, name = "idPost")
+    @JoinColumn(name = "idPost")
     @ManyToOne
     private Post post;
 
