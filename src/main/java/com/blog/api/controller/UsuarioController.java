@@ -28,12 +28,12 @@ public class UsuarioController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> cadastrarNovoUsuario(@PathVariable("id") Long id, @RequestBody Usuario usuario) {
-        Optional<Usuario> Usuario = usuarioRepository.findById(id);
+        Optional<Usuario> usuarioEncontrado = usuarioRepository.findById(id);
 
-        if (Usuario.isEmpty()) {
+        if (usuarioEncontrado.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return ResponseEntity.status(HttpStatus.OK).body(Usuario.get());
+        return ResponseEntity.status(HttpStatus.OK).body(usuarioEncontrado.get());
 
     }
 

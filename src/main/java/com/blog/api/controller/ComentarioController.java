@@ -32,7 +32,6 @@ public class ComentarioController {
     @Autowired
     private PostRepository postRepository;
 
-
     @PostMapping("/posts/{Id}/comentarios")
     public ResponseEntity<Comentario> cadastrarComentario(@PathVariable("Id") @Valid Long Id,
             @Valid @RequestBody Comentario comentario) {

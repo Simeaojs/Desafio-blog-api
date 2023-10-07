@@ -35,10 +35,9 @@ public class PostController {
     }
 
     @GetMapping("/usuarios")
-    public Page<Post> listarPostDeUsuarios(@PageableDefault(size = 10) Pageable paginacao) {
+    public Page<Post> listarPostDeTodosUsuarios(@PageableDefault(size = 10) Pageable paginacao) {
         return postRepository.findAll(paginacao);
     }
-
 
     @PutMapping("/{id}")
     public Post atualizarPorId(@PathVariable("id") Long id, @RequestBody @Valid Post post) {
