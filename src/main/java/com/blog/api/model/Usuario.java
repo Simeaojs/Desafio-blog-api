@@ -36,7 +36,7 @@ public class Usuario {
     @Email(message = "O email informado não é válido")
     private String email;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 20)
     @NotBlank(message = "A senha do usuario deve ser informada")
     private String senha;
 
