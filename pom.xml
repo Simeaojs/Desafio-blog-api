@@ -8,11 +8,11 @@
 		<version>3.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.taskify.api</groupId>
+	<groupId>com.blog-api.api</groupId>
 	<artifactId>blog-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>taskify-api</name>
-	<description>REST APIs da aplicação Taskify</description>
+	<name>blog-api</name>
+	<description>REST APIs da aplicação blog-api</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
