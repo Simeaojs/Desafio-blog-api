@@ -33,10 +33,10 @@ public class ComentarioController {
     private PostRepository postRepository;
 
 
-    @PostMapping("/posts/{postId}/comentarios")
-    public ResponseEntity<Comentario> cadastrarComentario(@PathVariable("postId") @Valid Long postId,
+    @PostMapping("/posts/{Id}/comentarios")
+    public ResponseEntity<Comentario> cadastrarComentario(@PathVariable("Id") @Valid Long Id,
             @Valid @RequestBody Comentario comentario) {
-        Optional<Post> postExistente = postRepository.findById(postId);
+        Optional<Post> postExistente = postRepository.findById(Id);
 
         if (postExistente.isPresent()) {
             comentario.setPost(postExistente.get());

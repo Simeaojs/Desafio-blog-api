@@ -22,7 +22,7 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     @PostMapping
-    public ResponseEntity<Usuario> cadastrarNovoUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity<Usuario> cadastrarNovoUsuario(@RequestBody @Valid Usuario usuario) {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
     }
 

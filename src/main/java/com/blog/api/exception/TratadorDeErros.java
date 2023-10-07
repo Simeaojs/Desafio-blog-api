@@ -1,4 +1,4 @@
-package com.blog.api.Exception;
+package com.blog.api.exception;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,18 +15,19 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import jakarta.persistence.EntityNotFoundException;
 
 @RestControllerAdvice
-public class Exception {
+public class TratadorDeErros {
 
-     @ExceptionHandler(EntityNotFoundException.class)
+    @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<String> tratarErro404(EntityNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 
     }
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> exceptionHandler(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
-        
+
         ex.getBindingResult().getAllErrors().forEach((error) -> {
             String fieldName = ((FieldError) error).getField();
             String errorMessage = error.getDefaultMessage();
@@ -41,4 +42,10 @@ public class Exception {
         return ResponseEntity.badRequest().body(ex.getMessage());
 
     }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> tratarErro500(Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro: " + ex.getLocalizedMessage());
+    }
+
 }
