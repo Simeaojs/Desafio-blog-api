@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 @Entity(name = "/comentario")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -31,6 +34,7 @@ public class Comentario {
 
     @JoinColumn(name = "idPost")
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Post post;
 
 }
