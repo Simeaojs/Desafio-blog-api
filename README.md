@@ -6,9 +6,9 @@ O objetivo deste projeto Foi desenvolver uma API REST usando o Spring Boot para 
 #
 ## ⚒️Tecnologias Utilizadas
 
-- [Java 17](https://docs.oracle.com/en/java/index.html)
-- [Spring Boot 3.1.4](https://spring.io/projects/spring-boot)
-- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+- Java 17
+- Spring Boot 3.1.4
+- Spring Data JPA
 - Banco de Dados (MySQL)
 - Gerenciador de Dependências Maven
 - Postman Para Requisições
