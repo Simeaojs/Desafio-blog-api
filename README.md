@@ -15,9 +15,9 @@ O objetivo deste projeto Foi desenvolver uma API REST usando o Spring Boot para 
 - IDE Visual Studio Code
 
 ## 🪛Configuração 
-
-1. Clone o repositório para o seu ambiente local.
-2. git clone ```https://github.com/Simeaojs/Desafio-blog-api```
+1. Faça Um Fork do repositório.
+2. Clone o repositório para o seu ambiente local.
+   -  git clone ```https://github.com/Simeaojs/Desafio-blog-api```
 3. Configure as dependências do projeto (Maven).
 4. Configure as informações do banco de dados no arquivo de configuração (`application.properties` ou `application.yml`).
 5. Execute a aplicação.
