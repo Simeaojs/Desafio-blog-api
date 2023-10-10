@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-@Entity(name = "/comentario")
+@Entity(name = "Comentarios")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
