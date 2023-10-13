@@ -1,0 +1,1446 @@
+{
+	"info": {
+		"_postman_id": "22bed6d8-7378-468e-8896-4f895785aa1e",
+		"name": "Blog-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28267689"
+	},
+	"item": [
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Cadastrar Autores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nome\":\"Lucas \",\r\n\t\"sobrenome\":\"Silva\",\r\n\t\"email\":\"joao@gmail\",\r\n\t\"senha\":\"Abc@1234\"\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Autores",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"nome\":\"Francisco\",\r\n\t\"sobrenome\":\"jose\",\r\n\t\"email\":\"francisco@hotmail\",\r\n\t\"senha\":\"789459632\"\r\n\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:20:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 1,\n    \"nome\": \"Francisco\",\n    \"sobrenome\": \"jose\",\n    \"email\": \"francisco@hotmail\",\n    \"senha\": \"789459632\"\n}"
+						},
+						{
+							"name": "Cadastrar Autores",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"nome\":\"João\",\r\n\t\"sobrenome\":\"Pé de feijão\",\r\n\t\"email\":\"joao@hotmail\",\r\n\t\"senha\":\"789459687\"\r\n\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:30:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 3,\n    \"nome\": \"João\",\n    \"sobrenome\": \"Pé de feijão\",\n    \"email\": \"joao@hotmail\",\n    \"senha\": \"789459687\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Listar Autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Autores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:20:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"idUsuario\": 1,\n            \"nome\": \"Francisco\",\n            \"sobrenome\": \"jose\",\n            \"email\": \"francisco@hotmail\",\n            \"senha\": \"789459632\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 20,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"first\": true,\n    \"size\": 20,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+						},
+						{
+							"name": "Listar Autores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:30:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"idUsuario\": 2,\n            \"nome\": \"Francisco\",\n            \"sobrenome\": \"jose da silva \",\n            \"email\": \"franciscojose@hotmail\",\n            \"senha\": \"789459632\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nome\": \"João\",\n            \"sobrenome\": \"Pé de feijão\",\n            \"email\": \"joao@hotmail\",\n            \"senha\": \"789459687\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 20,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"first\": true,\n    \"size\": 20,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Todos os Autores e postagem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Todos os Autores e postagem",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"usuarios"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:33:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"idPost\": 2,\n            \"titulo\": \" Testando Atualizaçao do post \",\n            \"conteudo\": \"criando endpoint de cadastro de posts\",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 2,\n                \"nome\": \"Francisco\",\n                \"sobrenome\": \"jose da silva \",\n                \"email\": \"franciscojose@hotmail\",\n                \"senha\": \"789459632\"\n            }\n        },\n        {\n            \"idPost\": 4,\n            \"titulo\": \"Testando Aplicação end point delete \",\n            \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 3,\n                \"nome\": \"João\",\n                \"sobrenome\": \"Pé de feijão\",\n                \"email\": \"joao@hotmail\",\n                \"senha\": \"789459687\"\n            }\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Autor + postagem pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/usuarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"usuarios",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Autor + postagem pelo Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/usuarios/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"usuarios",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:33:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idPost\": 2,\n        \"titulo\": \" Testando Atualizaçao do post \",\n        \"conteudo\": \"criando endpoint de cadastro de posts\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 2,\n            \"nome\": \"Francisco\",\n            \"sobrenome\": \"jose da silva \",\n            \"email\": \"franciscojose@hotmail\",\n            \"senha\": \"789459632\"\n        }\n    }\n]"
+						},
+						{
+							"name": "Autor + postagem pelo Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/usuarios/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"usuarios",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:34:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idPost\": 4,\n        \"titulo\": \"Testando Aplicação end point delete \",\n        \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 3,\n            \"nome\": \"João\",\n            \"sobrenome\": \"Pé de feijão\",\n            \"email\": \"joao@hotmail\",\n            \"senha\": \"789459687\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Atualizar Dados do Autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nome\":\"Francisco\",\r\n\t\"sobrenome\":\"jose da silva \",\r\n\t\"email\":\"franciscojose@hotmail\",\r\n\t\"senha\":\"789459632\"\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Atualizar Dados do Autor",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"nome\":\"Francisco\",\r\n\t\"sobrenome\":\"jose da silva \",\r\n\t\"email\":\"franciscojose@hotmail\",\r\n\t\"senha\":\"789459632\"\r\n\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/usuarios/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:25:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 2,\n    \"nome\": \"Francisco\",\n    \"sobrenome\": \"jose da silva \",\n    \"email\": \"franciscojose@hotmail\",\n    \"senha\": \"789459632\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Autores",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Autores",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/usuarios/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:21:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Cadastrar Posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"titulo\": \"Testando Aplicação end point delete 5\",\r\n    \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\r\n\t\"dataDeCriacao\": \"06/10/2023\",\r\n\t\"usuario\": {\r\n\t  \"idUsuario\":4\r\n\t}\r\n\t\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Posts",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"titulo\": \"Testando Aplicação  \",\r\n    \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\r\n\t\"dataDeCriacao\": \"06/10/2023\",\r\n\t\"usuario\": {\r\n\t  \"idUsuario\":2\r\n\t}\r\n\t\r\n\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:26:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPost\": 2,\n    \"titulo\": \"Testando Aplicação  \",\n    \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": {\n        \"idUsuario\": 2,\n        \"nome\": null,\n        \"sobrenome\": null,\n        \"email\": null,\n        \"senha\": null\n    }\n}"
+						},
+						{
+							"name": "Cadastrar Posts",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"titulo\": \"Testando Aplicação end point delete \",\r\n    \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\r\n\t\"dataDeCriacao\": \"06/10/2023\",\r\n\t\"usuario\": {\r\n\t  \"idUsuario\":3\r\n\t}\r\n\t\r\n\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:31:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPost\": 4,\n    \"titulo\": \"Testando Aplicação end point delete \",\n    \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": {\n        \"idUsuario\": 3,\n        \"nome\": null,\n        \"sobrenome\": null,\n        \"email\": null,\n        \"senha\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Retorna a lista de todas as postagens + detalhes de comentários e autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comentarios/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retorna a lista de todas as postagens + detalhes de comentários e autor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/comentarios/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:45:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idComentario\": 1,\n        \"texto\": \"Tentei pensar em algum texto legal mais não consegui vai ficar assim mesmo\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": null,\n        \"post\": {\n            \"idPost\": 2,\n            \"titulo\": \" Testando Atualizaçao do post \",\n            \"conteudo\": \"criando endpoint de cadastro de posts\",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 2,\n                \"nome\": \"Francisco\",\n                \"sobrenome\": \"jose da silva \",\n                \"email\": \"franciscojose@hotmail\",\n                \"senha\": \"789459632\"\n            }\n        }\n    },\n    {\n        \"idComentario\": 2,\n        \"texto\": \"Imagine um mundo onde os gatos governam e os humanos são seus assistentes pessoais.\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": null,\n        \"post\": {\n            \"idPost\": 4,\n            \"titulo\": \"Testando Aplicação end point delete \",\n            \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 3,\n                \"nome\": \"João\",\n                \"sobrenome\": \"Pé de feijão\",\n                \"email\": \"joao@hotmail\",\n                \"senha\": \"789459687\"\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retorna as postagem com base no ID, incluindo os comentários e os detalhes do autor.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comentarios/posts/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"posts",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retorna as postagem com base no ID, incluindo os comentários e os detalhes do autor.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/comentarios/posts/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"posts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:46:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idComentario\": 1,\n        \"texto\": \"Tentei pensar em algum texto legal mais não consegui vai ficar assim mesmo\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": null,\n        \"post\": {\n            \"idPost\": 2,\n            \"titulo\": \" Testando Atualizaçao do post \",\n            \"conteudo\": \"criando endpoint de cadastro de posts\",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 2,\n                \"nome\": \"Francisco\",\n                \"sobrenome\": \"jose da silva \",\n                \"email\": \"franciscojose@hotmail\",\n                \"senha\": \"789459632\"\n            }\n        }\n    }\n]"
+						},
+						{
+							"name": "Retorna as postagem com base no ID, incluindo os comentários e os detalhes do autor.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/comentarios/posts/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"posts",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:46:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idComentario\": 2,\n        \"texto\": \"Imagine um mundo onde os gatos governam e os humanos são seus assistentes pessoais.\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": null,\n        \"post\": {\n            \"idPost\": 4,\n            \"titulo\": \"Testando Aplicação end point delete \",\n            \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n            \"dataDeCriacao\": \"06/10/2023\",\n            \"usuario\": {\n                \"idUsuario\": 3,\n                \"nome\": \"João\",\n                \"sobrenome\": \"Pé de feijão\",\n                \"email\": \"joao@hotmail\",\n                \"senha\": \"789459687\"\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Atualizar Post Por Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"titulo\": \" Testando Atualizaçao do post \",\r\n\t\"conteudo\": \"criando endpoint de cadastro de posts\",\r\n\t\"dataDeCriacao\": \"06/10/2023\"\r\n\t\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Atualizar Post Por Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"titulo\": \" Testando Atualizaçao do post \",\r\n\t\"conteudo\": \"criando endpoint de cadastro de posts\",\r\n\t\"dataDeCriacao\": \"06/10/2023\"\r\n\t\t\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/posts/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:27:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idPost\": 2,\n    \"titulo\": \" Testando Atualizaçao do post \",\n    \"conteudo\": \"criando endpoint de cadastro de posts\",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": {\n        \"idUsuario\": 2,\n        \"nome\": \"Francisco\",\n        \"sobrenome\": \"jose da silva \",\n        \"email\": \"franciscojose@hotmail\",\n        \"senha\": \"789459632\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Post pelo Id e comentarios associados",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/posts/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Post pelo Id e comentarios associados",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/posts/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"posts",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 07 Oct 2023 05:55:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "Cadastrar Comentarios numa postagem existente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\t\r\n    \"texto\": \"Não espere por oportunidades extraordinárias. Agarre ocasiões comuns e as faça grandes. Homens fracos esperam por oportunidades; homens fortes as criam.\",\r\n    \"dataDeCriacao\": \"07/10/2023\"\r\n   \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comentarios/posts/7/comentarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"posts",
+								"7",
+								"comentarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cadastrar Comentarios numa postagem existente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\t\t\r\n    \"texto\": \"Tentei pensar em algum texto legal mais não consegui vai ficar assim mesmo\",\r\n    \"dataDeCriacao\": \"06/10/2023\"\r\n   \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/comentarios/posts/2/comentarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"posts",
+										"2",
+										"comentarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:42:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idComentario\": 1,\n    \"texto\": \"Tentei pensar em algum texto legal mais não consegui vai ficar assim mesmo\",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": null,\n    \"post\": {\n        \"idPost\": 2,\n        \"titulo\": \" Testando Atualizaçao do post \",\n        \"conteudo\": \"criando endpoint de cadastro de posts\",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 2,\n            \"nome\": \"Francisco\",\n            \"sobrenome\": \"jose da silva \",\n            \"email\": \"franciscojose@hotmail\",\n            \"senha\": \"789459632\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Cadastrar Comentarios numa postagem existente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\t\t\r\n    \"texto\": \"Imagine um mundo onde os gatos governam e os humanos são seus assistentes pessoais.\",\r\n    \"dataDeCriacao\": \"06/10/2023\"\r\n   \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/comentarios/posts/4/comentarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"posts",
+										"4",
+										"comentarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:44:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idComentario\": 2,\n    \"texto\": \"Imagine um mundo onde os gatos governam e os humanos são seus assistentes pessoais.\",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": null,\n    \"post\": {\n        \"idPost\": 4,\n        \"titulo\": \"Testando Aplicação end point delete \",\n        \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 3,\n            \"nome\": \"João\",\n            \"sobrenome\": \"Pé de feijão\",\n            \"email\": \"joao@hotmail\",\n            \"senha\": \"789459687\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Atualizar Texto de um comentario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"texto\":\" testando Atualização de comentário  \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "Http://localhost:8080/comentarios/2",
+							"protocol": "Http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Atualizar Texto de um comentario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"texto\":\" testando Atualização de comentário \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "Http://localhost:8080/comentarios/2",
+									"protocol": "Http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:48:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idComentario\": 2,\n    \"texto\": \" testando Atualização de comentário \",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": null,\n    \"post\": {\n        \"idPost\": 4,\n        \"titulo\": \"Testando Aplicação end point delete \",\n        \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 3,\n            \"nome\": \"João\",\n            \"sobrenome\": \"Pé de feijão\",\n            \"email\": \"joao@hotmail\",\n            \"senha\": \"789459687\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Atualizar Texto de um comentario",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"texto\":\" testando Atualização de comentário  \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "Http://localhost:8080/comentarios/2",
+									"protocol": "Http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:49:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idComentario\": 2,\n    \"texto\": \" testando Atualização de comentário  \",\n    \"dataDeCriacao\": \"06/10/2023\",\n    \"usuario\": null,\n    \"post\": {\n        \"idPost\": 4,\n        \"titulo\": \"Testando Aplicação end point delete \",\n        \"conteudo\": \"Criando os endpoints do desafio de blog da Treina recife \",\n        \"dataDeCriacao\": \"06/10/2023\",\n        \"usuario\": {\n            \"idUsuario\": 3,\n            \"nome\": \"João\",\n            \"sobrenome\": \"Pé de feijão\",\n            \"email\": \"joao@hotmail\",\n            \"senha\": \"789459687\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Comentarios pelo Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "Http://localhost:8080/comentarios/2",
+							"protocol": "Http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Comentarios pelo Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "Http://localhost:8080/comentarios/1",
+									"protocol": "Http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:49:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Deletar Comentarios pelo Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "Http://localhost:8080/comentarios/2",
+									"protocol": "Http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"comentarios",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Oct 2023 22:50:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
